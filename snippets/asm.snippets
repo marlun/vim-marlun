@@ -1,0 +1,24 @@
+snippet base
+# PURPOSE:	$1
+.section .data
+
+.section .text
+.globl _start
+_start:
+$0
+endsnippet
+
+snippet f
+# PURPOSE:	$1
+#
+# INPUT:	$2
+#
+# OUPUT:	$3
+#
+# VARIABLES:
+#			$4
+.type $5, @function
+$5:
+$0
+end_$5
+endsnippet
