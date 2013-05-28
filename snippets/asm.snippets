@@ -19,6 +19,14 @@ snippet f
 #			$4
 .type $5, @function
 $5:
+pushl %ebp			# Save the old base pointer
+movl %esp, %ebp		# Set the new base pointer
+
 $0
-end_$5
+
+end_$5:
+movl %ebp, %esp		# Restore stack pointer
+popl %ebp			# Restore base pointer
+ret					# Return to the caller
+
 endsnippet
