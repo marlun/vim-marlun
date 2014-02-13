@@ -54,6 +54,14 @@ while ($1) {
 }
 endsnippet
 
+snippet switch
+switch ($1) {
+$0
+default:
+	break;
+}
+endsnippet
+
 snippet title "Title transformation"
 ${1:a text}
 ${1/\w+\s*/\u$0/}
@@ -75,4 +83,9 @@ $sql = "
 	FROM $2
 	$0
 ";
+endsnippet
+
+snippet enerrors "Add code to display errors"
+ini_set('display_errors', true);
+error_reporting(E_ALL + E_NOTICE);
 endsnippet
