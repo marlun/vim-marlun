@@ -2,7 +2,7 @@
 let php_htmlInStrings=0
 
 " Search for help at php.net for word under cursor
-nmap <buffer> <silent> K :silent !open http://php.net/<C-R><C-W><CR><Bar>:redraw!<CR>
+nnoremap <buffer> <silent> K :!open http://php.net/<C-R><C-W><CR><Bar>:redraw!<CR>
 
 " Compile current files
 nmap O2S :!php %<CR>
