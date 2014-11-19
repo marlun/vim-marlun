@@ -4,14 +4,14 @@ snippet iife "immediately-invoked function expression" w
 }($2))
 endsnippet
 
-snippet f "anonymous function" w
-function($1) {
-	$0
-}
-endsnippet
+# snippet f "anonymous function" w
+# function($1) {
+# 	$0
+# }
+# endsnippet
 
-snippet f "function" b
-function ${1:name}($2) {
+snippet f "function" w
+function$1($2) {
 	$0
 }
 endsnippet
@@ -35,7 +35,7 @@ else {
 endsnippet
 
 snippet for
-for (var $1 in $2) {
+for ($1) {
 	${VISUAL}$0
 }
 endsnippet
