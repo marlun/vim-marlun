@@ -1,31 +1,30 @@
-snippet base
+snippet html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf8">
-		<title>Untitled</title>
-		<link rel="stylesheet" href="assets/css/style.css">
+		<title>$1</title>
 	</head>
 	<body>
-		${1}
-		<script src="assets/js/script.js"></script>
+		$0
 	</body>
 </html>
 endsnippet
-snippet ebase
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf8">
-		<title>Untitled</title>
-		<style></style>
-	</head>
-	<body>
-		${1}
-		<script></script>
-	</body>
-</html>
-endsnippet
+
 snippet input
-<input type="$1" name="$2"${3: value="$4"} id="$5">$0
+<input type="$1" name="$2">$0
+endsnippet
+
+snippet form
+<form method="$1" action="$2">
+	$0
+</form>
+endsnippet
+
+snippet link
+<link rel="${2:stylesheet}" href="$1">
+endsnippet
+
+snippet script
+<script src="$1">$0</script>
 endsnippet
