@@ -1,5 +1,7 @@
 " Indent case and default in switch cases
 let g:PHP_vintage_case_default_indent = 1
 
-" Syntax check PHP files on saving them
-autocmd BufWritePost *.php Accio php %
+if has("autocmd") && !exists("php_autocommands_loaded")
+	let php_autocommands_loaded = 1
+	autocmd BufWritePost *.php Accio php %
+endif
