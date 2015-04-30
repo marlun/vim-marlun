@@ -2,6 +2,10 @@ snippet i
 #include <$1>
 endsnippet
 
+snippet d
+#define $1
+endsnippet
+
 snippet main
 int main(int argc, char *argv[]) {
 	$0
@@ -11,5 +15,17 @@ endsnippet
 snippet f
 ${1:returnType} ${2:functionName}($3) {
 	$0
+}
+endsnippet
+
+snippet for
+for (${1:init}; ${2:cond}; ${3:inc}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet while
+while (${1:cond}) {
+	${VISUAL}$0
 }
 endsnippet
