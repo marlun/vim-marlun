@@ -6,9 +6,10 @@ snippet d
 #define $1
 endsnippet
 
-snippet main
-int main(int argc, char *argv[]) {
+snippet main "main function" b
+int main(${1:int argc, char *argv[]}) {
 	$0
+	return 0;
 }
 endsnippet
 
@@ -25,7 +26,26 @@ for (${1:init}; ${2:cond}; ${3:inc}) {
 endsnippet
 
 snippet while
-while (${1:cond}) {
+while (${1:condition}) {
 	${VISUAL}$0
 }
 endsnippet
+
+snippet if
+if (${1:condition}) {
+	$0
+}
+endsnippet
+
+snippet ef
+else if (${1:condition}) {
+	$0
+}
+endsnippet
+
+snippet el
+else {
+	$0
+}
+endsnippet
+
