@@ -12,7 +12,15 @@ function __construct($1) {
 }
 endsnippet
 
-snippet f
+priority -1
+snippet f "anonymous function"
+function($2) {
+	$0
+}
+endsnippet
+
+priority 1
+snippet f "function" b
 function ${1:functionName}($2) {
 	$0
 }
