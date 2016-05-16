@@ -1,3 +1,13 @@
+function! s:ShowDocForCurrentWord()
+  let word = expand("<cword>")
+  let query = substitute(word, "_", "-", "g")
+  echom query
+  let url = fnameescape("http://www.mutt.org/doc/manual/#") . query
+  echom url
+  execute "!open" url
+  redraw!
+endfunction
+
 if has('mac')
-	nnoremap <buffer> <silent> K :!open http://www.mutt.org/doc/manual/manual-6.html\#<C-R><C-W><CR><Bar>:redraw!<CR>
+	nnoremap <buffer> K :call <SID>ShowDocForCurrentWord()<CR>
 endif
