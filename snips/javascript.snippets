@@ -1,3 +1,7 @@
+snippet me
+module.exports = $0
+endsnippet
+
 snippet if
 if ($1) {
 	${VISUAL}$0
@@ -22,29 +26,24 @@ for ($1) {
 }
 endsnippet
 
-# priority 99
-# snippet f "anonymous function" w
-# function($1) {
-# 	$0
-# }
-# endsnippet
-
-snippet f "arrow function" w
-${1:($2)} => {$0}
-endsnippet
-
-snippet ff "arrow function online" w
-${1:($2)} => $0
-endsnippet
-
-snippet fun "function" w
-function $1($2) {
+snippet f "anonymous function" w
+function ($1) {
 	$0
 }
 endsnippet
 
+snippet ff "named function statemant" w
+function $1 ($2) {
+	$0
+}
+endsnippet
+
+snippet af "arrow function" w
+($1) => ${2:{${3}}}
+endsnippet
+
 snippet iife "immediately-invoked function expression" w
-(function($1) {
+(function ($1) {
 	$0
 }($2))
 endsnippet
@@ -56,15 +55,15 @@ ${1:Object}.prototype.${2:name} = function $2() {
 endsnippet
 
 snippet log
-console.log(${VISUAL}$0);
+console.log(${VISUAL}$0)
 endsnippet
 
 snippet r
-const $1 = require('${2:$1}');
+var $1 = require('${2:$1}')
 endsnippet
 
 snippet test
-test('$1', t => {
+test('$1', function (t) {
 	$0
 });
 endsnippet
