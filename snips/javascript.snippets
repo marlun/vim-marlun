@@ -48,6 +48,12 @@ snippet iife "immediately-invoked function expression" w
 }($2))
 endsnippet
 
+snippet cb "callback" w
+function (err, ${1:data}) {
+	$0
+}
+endsnippet
+
 snippet pt "Add to prototype"
 ${1:Object}.prototype.${2:name} = function $2() {
 	$0
