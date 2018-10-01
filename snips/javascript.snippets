@@ -26,6 +26,12 @@ for ($1) {
 }
 endsnippet
 
+snippet m "method" w
+$1 ($2) {
+	$0
+}
+endsnippet
+
 snippet f "anonymous function" w
 function ($1) {
 	$0
@@ -65,7 +71,7 @@ console.log(${VISUAL}$0)
 endsnippet
 
 snippet r
-var $1 = require('${2:$1}')
+const $1 = require('${2:$1}')
 endsnippet
 
 snippet test
@@ -76,4 +82,12 @@ endsnippet
 
 snippet pt "prototype" i
 prototype
+endsnippet
+
+snippet try "try/catch"
+try {
+	$0
+} catch ($1) {
+	$2
+}
 endsnippet
