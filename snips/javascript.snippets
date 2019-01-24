@@ -1,5 +1,5 @@
 snippet me
-module.exports
+module.exports = $0
 endsnippet
 
 snippet if
@@ -78,6 +78,15 @@ snippet test
 test('$1', function (t) {
 	$0
 });
+endsnippet
+
+snippet testbase
+const test = require('tape')
+const $1 = require('$2/$1')
+
+test('$3', function (t) {
+	$0
+})
 endsnippet
 
 snippet pt "prototype" i
